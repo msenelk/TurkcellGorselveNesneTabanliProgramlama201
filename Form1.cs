@@ -67,6 +67,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             baglanti.Close();
             MessageBox.Show("Kategori güncelleme işlemi başarılı bir şekilde gerçekleşti.");
         }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Select * From TblKategori where Ad=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKategoriAd.Text);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }
 
