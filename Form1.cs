@@ -18,3 +18,5 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         }
     }
 }
+
+// Data Source=MSENELK\SQLEXPRESS;Initial Catalog=DbUrun;Integrated Security=True;Encrypt=True;Trust Server Certificate=True
