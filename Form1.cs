@@ -46,6 +46,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             baglanti.Close();
             MessageBox.Show("Kategoriniz Başarılı Bir Şekilde Eklendi");
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("delete from TblKategori where Id=@p1",baglanti);
+            komut.Parameters.AddWithValue("@p1", txtId.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kategori silme işlemi başarılı bir şekilde gerçekleşti");
+        }
     }
 }
 
