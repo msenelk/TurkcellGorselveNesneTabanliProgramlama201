@@ -26,16 +26,25 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             #endregion // SQL Komutları
             // AutoSizeColumnsMode = Otomatik Sütun Boyutu - Fiil tam olarak ayarlar.
         }
-
+        SqlConnection baglanti = new SqlConnection(@"Data Source=MSENELK\SQLEXPRESS;Initial Catalog=DbUrun;Integrated Security=True");
+        // SqlConneciton sınıfından bağlantı adında bir sınıf oluşturduk.
         private void btnListele_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(@"Data Source=MSENELK\SQLEXPRESS;Initial Catalog=DbUrun;Integrated Security=True");
-            // SqlConneciton sınıfından bağlantı adında bir sınıf oluşturduk.
             SqlCommand komut = new SqlCommand("Select * From TblKategori", baglanti);
             SqlDataAdapter da=new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into TblKategori (Ad) Values (@p1)", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKategoriAd.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kategoriniz Başarılı Bir Şekilde Eklendi");
         }
     }
 }

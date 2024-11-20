@@ -31,7 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKategoriAd = new System.Windows.Forms.TextBox();
             this.btnListele = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
@@ -54,11 +54,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtKategoriAd);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 87);
+            this.groupBox1.Size = new System.Drawing.Size(660, 87);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -71,12 +71,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kategori Adı:";
             // 
-            // textBox1
+            // txtKategoriAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtKategoriAd.Location = new System.Drawing.Point(145, 38);
+            this.txtKategoriAd.Name = "txtKategoriAd";
+            this.txtKategoriAd.Size = new System.Drawing.Size(268, 30);
+            this.txtKategoriAd.TabIndex = 1;
             // 
             // btnListele
             // 
@@ -96,6 +96,7 @@
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
@@ -152,7 +153,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKategoriAd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.Button btnKaydet;
