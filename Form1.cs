@@ -56,6 +56,17 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             baglanti.Close();
             MessageBox.Show("Kategori silme işlemi başarılı bir şekilde gerçekleşti");
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("update TblKategori set Ad=@p1 where Id=@p2", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKategoriAd.Text);
+            komut.Parameters.AddWithValue("@p2",txtId.Text);
+            komut.ExecuteNonQuery(); // Değişikleri kaydet veritabanına yansıt
+            baglanti.Close();
+            MessageBox.Show("Kategori güncelleme işlemi başarılı bir şekilde gerçekleşti.");
+        }
     }
 }
 
