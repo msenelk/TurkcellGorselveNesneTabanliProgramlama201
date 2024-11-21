@@ -71,10 +71,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             // Cells ise sütun olarak hangi veriyi alacağımızı belirtiyoruz
             txtUrunId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtUrunAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            // numericUpDown1.Value = (decimal)dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            numericUpDown1.Value = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
             txtAlisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtSatisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            // comboBox1.ValueMember = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
 
         }
