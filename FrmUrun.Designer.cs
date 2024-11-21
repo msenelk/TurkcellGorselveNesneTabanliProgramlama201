@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.txtKategoriId = new System.Windows.Forms.TextBox();
+            this.txtUrunId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -87,7 +87,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtUrunAdi);
-            this.groupBox1.Controls.Add(this.txtKategoriId);
+            this.groupBox1.Controls.Add(this.txtUrunId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(744, 12);
@@ -182,12 +182,12 @@
             this.txtUrunAdi.Size = new System.Drawing.Size(200, 30);
             this.txtUrunAdi.TabIndex = 3;
             // 
-            // txtKategoriId
+            // txtUrunId
             // 
-            this.txtKategoriId.Location = new System.Drawing.Point(124, 38);
-            this.txtKategoriId.Name = "txtKategoriId";
-            this.txtKategoriId.Size = new System.Drawing.Size(200, 30);
-            this.txtKategoriId.TabIndex = 1;
+            this.txtUrunId.Location = new System.Drawing.Point(124, 38);
+            this.txtUrunId.Name = "txtUrunId";
+            this.txtUrunId.Size = new System.Drawing.Size(200, 30);
+            this.txtUrunId.TabIndex = 1;
             // 
             // label1
             // 
@@ -258,7 +258,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUrunAdi;
-        private System.Windows.Forms.TextBox txtKategoriId;
+        private System.Windows.Forms.TextBox txtUrunId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
