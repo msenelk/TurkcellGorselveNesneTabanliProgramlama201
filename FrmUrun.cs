@@ -21,11 +21,12 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            SqlCommand komut1 = new SqlCommand("Select * from TblUrunler", baglanti);
+            SqlCommand komut1 = new SqlCommand("select UrunId,UrunAd, Stok, AlisFiyat, SatisFiyat, Ad,Kategori from TblUrunler Inner Join TblKategori On TblUrunler.Kategori=TblKategori.Id", baglanti);
             SqlDataAdapter da=new SqlDataAdapter(komut1);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns["Kategori"].Visible = false;
 
         }
 
@@ -74,7 +75,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             numericUpDown1.Value = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
             txtAlisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtSatisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            comboBox1.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
 
 
         }
