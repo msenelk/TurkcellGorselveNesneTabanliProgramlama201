@@ -63,5 +63,20 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             baglanti.Close();
             MessageBox.Show("İstediğiniz ürünün silme işlemi başarılı bir şekilde gerçekleşti.");
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // CellClik hücreye tıklandığı anlamına gelir
+            // e harfi kullanılır.
+            // Cells ise sütun olarak hangi veriyi alacağımızı belirtiyoruz
+            txtUrunId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtUrunAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            // numericUpDown1.Value = (decimal)dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtAlisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSatisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            // comboBox1.ValueMember = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+
+        }
     }
 }
