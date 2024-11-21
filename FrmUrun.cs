@@ -28,5 +28,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             dataGridView1.DataSource = dt;
 
         }
+
+        private void FrmUrun_Load(object sender, EventArgs e)
+        {
+            SqlCommand komut2 = new SqlCommand("select * from TblKategori", baglanti);
+            SqlDataAdapter da2 = new SqlDataAdapter(komut2);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            comboBox1.DisplayMember = "Ad"; // Gösterilecek olan veri alanı
+            comboBox1.ValueMember = "Id"; // Seçim yapıldığında geri dönecek olan değerin veri alanı.
+            comboBox1.DataSource = dt2;
+        }
     }
 }
