@@ -78,5 +78,20 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
 
 
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut5 = new SqlCommand("update tblurunler set urunad=@p1,stok=@p2,AlisFiyat=@p3,SatisFiyat=@p4,Kategori=@p5 where urunId=@p6", baglanti);
+            komut5.Parameters.AddWithValue("@p1", txtUrunAdi.Text);
+            komut5.Parameters.AddWithValue("@p2", numericUpDown1.Value);
+            komut5.Parameters.AddWithValue("@p3", decimal.Parse(txtAlisFiyat.Text)); // Fiyatlar virgüllü olduğu için gelen değeri decimal e çevirdik
+            komut5.Parameters.AddWithValue("@p4", decimal.Parse(txtSatisFiyat.Text));
+            komut5.Parameters.AddWithValue("@p5", comboBox1.SelectedValue);
+            komut5.Parameters.AddWithValue("@p6", txtUrunId.Text);
+            komut5.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Ürün bilgileri başarıyla güncellendi.","Güncelleme",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
