@@ -61,6 +61,26 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
                 lblEnDusukStok.Text = dusukStokdt["UrunAd"].ToString();
             }
             baglanti.Close();
+
+            // Toplam Beyaz Eşya Sayısı
+            baglanti.Open();
+            SqlCommand beyazEsya = new SqlCommand("Select Count(*) from TblUrunler where Kategori=(select Id from TblKategori where Ad='Beyaz Eşya')", baglanti);
+            SqlDataReader beyazEsyadr = beyazEsya.ExecuteReader();
+            while (beyazEsyadr.Read())
+            {
+                lblBeyazEsya.Text = beyazEsyadr[0].ToString();
+            }
+            baglanti.Close();
+
+            // Küçük Ev Aletleri
+            baglanti.Open();
+            SqlCommand kucukEvAletleri = new SqlCommand("Select Count(*) from TblUrunler where Kategori=(select Id from TblKategori where Ad='Küçük Ev Aletleri')", baglanti);
+            SqlDataReader kucukEvAletleridr = kucukEvAletleri.ExecuteReader();
+            while (kucukEvAletleridr.Read())
+            {
+                lblKucukEvAletleri.Text = kucukEvAletleridr[0].ToString();
+            }
+            baglanti.Close();
         }
     }
 }
