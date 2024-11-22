@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblToplamKategori = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblToplamUrunSayisi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -74,51 +74,51 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblToplamKategori);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(22, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(254, 128);
             this.panel1.TabIndex = 1;
             // 
-            // label2
+            // lblToplamKategori
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(90, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblToplamKategori.AutoSize = true;
+            this.lblToplamKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplamKategori.Location = new System.Drawing.Point(90, 73);
+            this.lblToplamKategori.Name = "lblToplamKategori";
+            this.lblToplamKategori.Size = new System.Drawing.Size(64, 22);
+            this.lblToplamKategori.TabIndex = 1;
+            this.lblToplamKategori.Text = "label2";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblToplamUrunSayisi);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(312, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(254, 128);
             this.panel2.TabIndex = 2;
             // 
-            // label3
+            // lblToplamUrunSayisi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(90, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.lblToplamUrunSayisi.AutoSize = true;
+            this.lblToplamUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplamUrunSayisi.Location = new System.Drawing.Point(90, 73);
+            this.lblToplamUrunSayisi.Name = "lblToplamUrunSayisi";
+            this.lblToplamUrunSayisi.Size = new System.Drawing.Size(64, 22);
+            this.lblToplamUrunSayisi.TabIndex = 1;
+            this.lblToplamUrunSayisi.Text = "label3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 21);
+            this.label4.Location = new System.Drawing.Point(43, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 22);
+            this.label4.Size = new System.Drawing.Size(167, 22);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Toplam Kategori Sayısı";
+            this.label4.Text = "Toplam Ürün Sayısı";
             // 
             // panel3
             // 
@@ -312,6 +312,7 @@
             this.Name = "FrmIstatistik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İstatistikler";
+            this.Load += new System.EventHandler(this.FrmIstatistik_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -336,9 +337,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblToplamKategori;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblToplamUrunSayisi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
