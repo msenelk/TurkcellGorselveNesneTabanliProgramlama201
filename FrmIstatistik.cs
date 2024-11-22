@@ -41,6 +41,26 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
                 lblToplamUrunSayisi.Text = dr2[0].ToString();
             }
             baglanti.Close();
+
+            // En yüksek stoklu ürün
+            baglanti.Open();
+            SqlCommand yuksekStok = new SqlCommand("Select * from TblUrunler where Stok=(select max(stok) from TblUrunler)", baglanti);
+            SqlDataReader yuksekStokdt = yuksekStok.ExecuteReader();
+            while (yuksekStokdt.Read())
+            {
+                lblEnYuksekStok.Text = yuksekStokdt["UrunAd"].ToString();
+            }
+            baglanti.Close();
+
+            // En düşük stoklu ürün
+            baglanti.Open();
+            SqlCommand dusukStok = new SqlCommand("Select * from TblUrunler where Stok=(select min(stok) from TblUrunler)", baglanti);
+            SqlDataReader dusukStokdt = dusukStok.ExecuteReader();
+            while (dusukStokdt.Read())
+            {
+                lblEnDusukStok.Text = dusukStokdt["UrunAd"].ToString();
+            }
+            baglanti.Close();
         }
     }
 }

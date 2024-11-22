@@ -47,10 +47,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblEnDusukStok = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblEnYuksekStok = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -239,51 +239,51 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.lblEnDusukStok);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Location = new System.Drawing.Point(312, 189);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(254, 128);
             this.panel7.TabIndex = 6;
             // 
-            // label13
+            // lblEnDusukStok
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(90, 73);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 22);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "label13";
+            this.lblEnDusukStok.AutoSize = true;
+            this.lblEnDusukStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEnDusukStok.Location = new System.Drawing.Point(90, 73);
+            this.lblEnDusukStok.Name = "lblEnDusukStok";
+            this.lblEnDusukStok.Size = new System.Drawing.Size(75, 22);
+            this.lblEnDusukStok.TabIndex = 1;
+            this.lblEnDusukStok.Text = "label13";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(25, 21);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(195, 22);
+            this.label14.Size = new System.Drawing.Size(187, 22);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Toplam Kategori Sayısı";
+            this.label14.Text = "En Düşük Stoklu Ürün";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
-            this.panel8.Controls.Add(this.label15);
+            this.panel8.Controls.Add(this.lblEnYuksekStok);
             this.panel8.Controls.Add(this.label16);
             this.panel8.Location = new System.Drawing.Point(22, 189);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(254, 128);
             this.panel8.TabIndex = 3;
             // 
-            // label15
+            // lblEnYuksekStok
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(90, 73);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 22);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "label15";
+            this.lblEnYuksekStok.AutoSize = true;
+            this.lblEnYuksekStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEnYuksekStok.Location = new System.Drawing.Point(90, 73);
+            this.lblEnYuksekStok.Name = "lblEnYuksekStok";
+            this.lblEnYuksekStok.Size = new System.Drawing.Size(75, 22);
+            this.lblEnYuksekStok.TabIndex = 1;
+            this.lblEnYuksekStok.Text = "label15";
             // 
             // label16
             // 
@@ -292,7 +292,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(195, 22);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Toplam Kategori Sayısı";
+            this.label16.Text = "En Yüksek Stoklu Ürün";
             // 
             // FrmIstatistik
             // 
@@ -354,10 +354,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblEnDusukStok;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEnYuksekStok;
         private System.Windows.Forms.Label label16;
     }
 }
