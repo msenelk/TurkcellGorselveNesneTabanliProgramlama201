@@ -44,7 +44,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblToplamKar = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblEnDusukStok = new System.Windows.Forms.Label();
@@ -211,31 +211,31 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(67)))), ((int)(((byte)(147)))));
-            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.lblToplamKar);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Location = new System.Drawing.Point(619, 189);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(254, 128);
             this.panel6.TabIndex = 5;
             // 
-            // label11
+            // lblToplamKar
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(90, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 22);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "label11";
+            this.lblToplamKar.AutoSize = true;
+            this.lblToplamKar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplamKar.Location = new System.Drawing.Point(90, 73);
+            this.lblToplamKar.Name = "lblToplamKar";
+            this.lblToplamKar.Size = new System.Drawing.Size(75, 22);
+            this.lblToplamKar.TabIndex = 1;
+            this.lblToplamKar.Text = "label11";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 21);
+            this.label12.Location = new System.Drawing.Point(5, 21);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 22);
+            this.label12.Size = new System.Drawing.Size(246, 22);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Toplam Kategori Sayısı";
+            this.label12.Text = "Laptopların Toplam Kar Oranı";
             // 
             // panel7
             // 
@@ -352,7 +352,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblToplamKar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblEnDusukStok;

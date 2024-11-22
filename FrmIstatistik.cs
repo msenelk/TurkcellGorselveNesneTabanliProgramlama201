@@ -81,6 +81,18 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
                 lblKucukEvAletleri.Text = kucukEvAletleridr[0].ToString();
             }
             baglanti.Close();
+
+            //  Laptop Toplam Kar Oranı
+            baglanti.Open();
+            SqlCommand laptopKar = new SqlCommand("Select Stok*(SatisFiyat - AlisFiyat) from TblUrunler where UrunAd='Laptop'", baglanti);
+            SqlDataReader laptopKardr = laptopKar.ExecuteReader();
+            while (laptopKardr.Read())
+            {
+                lblToplamKar.Text = laptopKardr[0].ToString() + " ₺";
+            }
+            baglanti.Close();
+
+
         }
     }
 }
