@@ -92,6 +92,15 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             }
             baglanti.Close();
 
+            //  Beyaz Eşya Toplam Kar Oranı
+            baglanti.Open();
+            SqlCommand beyazEsyaToplamKar = new SqlCommand("Select sum(stok*(SatisFiyat-AlisFiyat)) as 'Toplam Stokla Çarpılan Sonuç' from TblUrunler where Kategori=(Select ID From TblKategori where Ad='Beyaz Eşya')", baglanti);
+            SqlDataReader beyazEsyaToplamKardr = beyazEsyaToplamKar.ExecuteReader();
+            while (beyazEsyaToplamKardr.Read())
+            {
+                lblBeyazEsyaToplamKar.Text = beyazEsyaToplamKardr[0].ToString() + " ₺";
+            }
+            baglanti.Close();
 
         }
     }
