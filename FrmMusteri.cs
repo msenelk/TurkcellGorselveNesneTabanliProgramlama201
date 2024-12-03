@@ -16,10 +16,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         {
             InitializeComponent();
         }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void FrmMusteri_Load(object sender, EventArgs e)
         {
-
+            DataSet1TableAdapters.TblMusteriTableAdapter tb = new DataSet1TableAdapters.TblMusteriTableAdapter();
+            dataGridView1.DataSource = tb.MusteriListesi();
         }
     }
 }
