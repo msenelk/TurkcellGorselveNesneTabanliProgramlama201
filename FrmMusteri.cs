@@ -45,5 +45,11 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             txtSehir.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtBakiye.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            tb.MusteriGuncelle(txtAd.Text,txtSoyad.Text,txtSehir.Text,decimal.Parse(txtBakiye.Text),int.Parse(txtMusteriId.Text));
+            MessageBox.Show("Müşteri bilgisi güncellendi.");
+        }
     }
 }
