@@ -77,9 +77,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         #endregion
 
         #region Prosedürlerde Parametre Kullanımı
-            //Create Procedure UrunGetir(@ID int) prosedür olşuturuyoruz ve dışarıdan bir değer alacağını belirtiyoruz.
-            //As
-            //Select* from TblUrunler where UrunId=@ID // dışarıdan gelen değer
+        //Create Procedure UrunGetir(@ID int) prosedür olşuturuyoruz ve dışarıdan bir değer alacağını belirtiyoruz.
+        //As
+        //Select* from TblUrunler where UrunId=@ID // dışarıdan gelen değer
+        #endregion
+
+        #region View Nedir?
+        // Uzun SQL sorgularını tek bir komut altında çağırmamıza olanak sağlayan yapılardır.
+        // Özellikle ilişkili tabloların birleştirme noktalarında çokça kullanılır.
+        // Proesdürlerde olduğu gibi Execute ifadesi ile değil Select * from View_Name şeklinde kullanılır.
+        // Viewler parametre almazlar.
         #endregion
     }
 }
