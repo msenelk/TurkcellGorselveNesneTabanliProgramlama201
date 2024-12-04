@@ -124,6 +124,7 @@
             this.btnListele.TabIndex = 6;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // txtFiyat
             // 
