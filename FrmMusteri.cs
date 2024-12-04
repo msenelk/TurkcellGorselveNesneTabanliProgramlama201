@@ -51,5 +51,21 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             tb.MusteriGuncelle(txtAd.Text,txtSoyad.Text,txtSehir.Text,decimal.Parse(txtBakiye.Text),int.Parse(txtMusteriId.Text));
             MessageBox.Show("Müşteri bilgisi güncellendi.");
         }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            if(RdbAd.Checked==true) // Eğer Radio butonlarından ad olan seçiliyse;
+            {
+                dataGridView1.DataSource = tb.AdaGoreListele(txtAranacak.Text);
+            }
+            if(RdbSehir.Checked==true)
+            {
+                dataGridView1.DataSource = tb.SehreGoreListele(txtAranacak.Text);
+            }
+            if (RdbSoyad.Checked == true)
+            {
+                dataGridView1.DataSource = tb.SoyadaGoreListele(txtAranacak.Text);
+            }
+        }
     }
 }

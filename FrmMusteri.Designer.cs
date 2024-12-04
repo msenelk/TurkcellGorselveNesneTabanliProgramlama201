@@ -232,6 +232,7 @@
             this.btnAra.TabIndex = 10;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // RdbSehir
             // 
