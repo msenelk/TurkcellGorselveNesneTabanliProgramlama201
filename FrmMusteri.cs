@@ -27,7 +27,14 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         {
             tb.MusteriEkle(txtAd.Text, txtSoyad.Text, txtSehir.Text, decimal.Parse(txtBakiye.Text));
             MessageBox.Show("Müşteri Sisteme Kaydedildi");
+            dataGridView1.DataSource = tb.MusteriListesi(); // İşem sonrası otomatik güncelleme yapılması için yazdım
         }
 
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            tb.MusteriSil(int.Parse(txtMusteriId.Text));
+            MessageBox.Show("Müşteri sistemden silindi");
+            dataGridView1.DataSource = tb.MusteriListesi(); // İşem sonrası otomatik güncelleme yapılması için yazdım
+        }
     }
 }
