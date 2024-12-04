@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraBars.Docking2010.Views.BaseRegistrator;
 
 namespace TurkcellGorselveNesneTabanliProgramlama201
 {
@@ -73,6 +74,12 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         // Programlama dillerindeki metotlara benzerler.
         // Create komutu ile oluşturulurlar.
         // Execute komutu ile çağrılırlar.
+        #endregion
+
+        #region Prosedürlerde Parametre Kullanımı
+            //Create Procedure UrunGetir(@ID int) prosedür olşuturuyoruz ve dışarıdan bir değer alacağını belirtiyoruz.
+            //As
+            //Select* from TblUrunler where UrunId=@ID // dışarıdan gelen değer
         #endregion
     }
 }
