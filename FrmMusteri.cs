@@ -67,5 +67,12 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
                 dataGridView1.DataSource = tb.SoyadaGoreListele(txtAranacak.Text);
             }
         }
+
+        #region Prosedür Nedir?
+        // Uzun SQL sorgularını tek kelimelik komutlara sığdıran yapılardır.
+        // Programlama dillerindeki metotlara benzerler.
+        // Create komutu ile oluşturulurlar.
+        // Execute komutu ile çağrılırlar.
+        #endregion
     }
 }
