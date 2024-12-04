@@ -96,6 +96,12 @@
     <Compile Include="FrmMusteri.Designer.cs">
       <DependentUpon>FrmMusteri.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislar.Designer.cs">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUrun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMusteri.resx">
       <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislar.resx">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUrun.resx">
       <DependentUpon>FrmUrun.cs</DependentUpon>
