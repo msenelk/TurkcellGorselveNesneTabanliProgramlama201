@@ -88,5 +88,11 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         // Proesdürlerde olduğu gibi Execute ifadesi ile değil Select * from View_Name şeklinde kullanılır.
         // Viewler parametre almazlar.
         #endregion
+
+        #region Trigger Nedir?
+        // Tetikleyici olarak adlandırılmaktadır.
+        // Herhangi bir veri tabannı işlemi anında veya işlemden sonra bir başka işlem gerçekleştirilmesini sağlayan yapılardır.
+        // Örneğin bir tabloda ürün satışı yapıldıktan sonra toplam stok sayısının satış adedi kadar azalması trigger ile yapılabilir.
+        #endregion
     }
 }
