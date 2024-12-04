@@ -16,10 +16,18 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
         {
             InitializeComponent();
         }
-        private void FrmMusteri_Load(object sender, EventArgs e)
+
+        DataSet1TableAdapters.TblMusteriTableAdapter tb = new DataSet1TableAdapters.TblMusteriTableAdapter();
+        private void btnListele_Click(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.TblMusteriTableAdapter tb = new DataSet1TableAdapters.TblMusteriTableAdapter();
             dataGridView1.DataSource = tb.MusteriListesi();
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            tb.MusteriEkle(txtAd.Text, txtSoyad.Text, txtSehir.Text, decimal.Parse(txtBakiye.Text));
+            MessageBox.Show("Müşteri Sisteme Kaydedildi");
+        }
+
     }
 }

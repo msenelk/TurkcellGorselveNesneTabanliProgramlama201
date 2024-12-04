@@ -42,15 +42,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.RdbSehir = new System.Windows.Forms.RadioButton();
+            this.RdbSoyad = new System.Windows.Forms.RadioButton();
+            this.RdbAd = new System.Windows.Forms.RadioButton();
             this.txtAranacak = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.RdbAd = new System.Windows.Forms.RadioButton();
-            this.RdbSoyad = new System.Windows.Forms.RadioButton();
-            this.RdbSehir = new System.Windows.Forms.RadioButton();
-            this.btnAra = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -82,6 +82,7 @@
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnListele
             // 
@@ -91,6 +92,7 @@
             this.btnListele.TabIndex = 6;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // txtBakiye
             // 
@@ -187,6 +189,13 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(109, 124);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(200, 30);
+            this.txtSoyad.TabIndex = 3;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -197,13 +206,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(878, 431);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // txtSoyad
-            // 
-            this.txtSoyad.Location = new System.Drawing.Point(109, 124);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(200, 30);
-            this.txtSoyad.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -218,6 +220,48 @@
             this.groupBox2.Size = new System.Drawing.Size(871, 111);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
+            // 
+            // btnAra
+            // 
+            this.btnAra.Location = new System.Drawing.Point(642, 35);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(200, 50);
+            this.btnAra.TabIndex = 10;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
+            // 
+            // RdbSehir
+            // 
+            this.RdbSehir.AutoSize = true;
+            this.RdbSehir.Location = new System.Drawing.Point(557, 46);
+            this.RdbSehir.Name = "RdbSehir";
+            this.RdbSehir.Size = new System.Drawing.Size(79, 29);
+            this.RdbSehir.TabIndex = 13;
+            this.RdbSehir.TabStop = true;
+            this.RdbSehir.Text = "Şehir";
+            this.RdbSehir.UseVisualStyleBackColor = true;
+            // 
+            // RdbSoyad
+            // 
+            this.RdbSoyad.AutoSize = true;
+            this.RdbSoyad.Location = new System.Drawing.Point(461, 45);
+            this.RdbSoyad.Name = "RdbSoyad";
+            this.RdbSoyad.Size = new System.Drawing.Size(90, 29);
+            this.RdbSoyad.TabIndex = 12;
+            this.RdbSoyad.TabStop = true;
+            this.RdbSoyad.Text = "Soyad";
+            this.RdbSoyad.UseVisualStyleBackColor = true;
+            // 
+            // RdbAd
+            // 
+            this.RdbAd.AutoSize = true;
+            this.RdbAd.Location = new System.Drawing.Point(397, 45);
+            this.RdbAd.Name = "RdbAd";
+            this.RdbAd.Size = new System.Drawing.Size(58, 29);
+            this.RdbAd.TabIndex = 11;
+            this.RdbAd.TabStop = true;
+            this.RdbAd.Text = "Ad";
+            this.RdbAd.UseVisualStyleBackColor = true;
             // 
             // txtAranacak
             // 
@@ -235,48 +279,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Aranacak Kelime";
             // 
-            // RdbAd
-            // 
-            this.RdbAd.AutoSize = true;
-            this.RdbAd.Location = new System.Drawing.Point(397, 45);
-            this.RdbAd.Name = "RdbAd";
-            this.RdbAd.Size = new System.Drawing.Size(58, 29);
-            this.RdbAd.TabIndex = 11;
-            this.RdbAd.TabStop = true;
-            this.RdbAd.Text = "Ad";
-            this.RdbAd.UseVisualStyleBackColor = true;
-            // 
-            // RdbSoyad
-            // 
-            this.RdbSoyad.AutoSize = true;
-            this.RdbSoyad.Location = new System.Drawing.Point(461, 45);
-            this.RdbSoyad.Name = "RdbSoyad";
-            this.RdbSoyad.Size = new System.Drawing.Size(90, 29);
-            this.RdbSoyad.TabIndex = 12;
-            this.RdbSoyad.TabStop = true;
-            this.RdbSoyad.Text = "Soyad";
-            this.RdbSoyad.UseVisualStyleBackColor = true;
-            // 
-            // RdbSehir
-            // 
-            this.RdbSehir.AutoSize = true;
-            this.RdbSehir.Location = new System.Drawing.Point(557, 46);
-            this.RdbSehir.Name = "RdbSehir";
-            this.RdbSehir.Size = new System.Drawing.Size(79, 29);
-            this.RdbSehir.TabIndex = 13;
-            this.RdbSehir.TabStop = true;
-            this.RdbSehir.Text = "Şehir";
-            this.RdbSehir.UseVisualStyleBackColor = true;
-            // 
-            // btnAra
-            // 
-            this.btnAra.Location = new System.Drawing.Point(642, 35);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(200, 50);
-            this.btnAra.TabIndex = 10;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
-            // 
             // FrmMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -290,7 +292,6 @@
             this.Name = "FrmMusteri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMusteri";
-            this.Load += new System.EventHandler(this.FrmMusteri_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
