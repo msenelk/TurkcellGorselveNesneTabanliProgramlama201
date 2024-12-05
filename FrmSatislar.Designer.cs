@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskTarih = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtToplam = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.mskTarih);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtToplam);
@@ -89,14 +89,14 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // maskedTextBox1
+            // mskTarih
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(98, 294);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 28);
-            this.maskedTextBox1.TabIndex = 15;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mskTarih.Location = new System.Drawing.Point(98, 294);
+            this.mskTarih.Mask = "00/00/0000";
+            this.mskTarih.Name = "mskTarih";
+            this.mskTarih.Size = new System.Drawing.Size(200, 28);
+            this.mskTarih.TabIndex = 15;
+            this.mskTarih.ValidatingType = typeof(System.DateTime);
             // 
             // comboBox1
             // 
@@ -165,6 +165,7 @@
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnListele
             // 
@@ -282,6 +283,6 @@
         private System.Windows.Forms.TextBox txtSatisID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskTarih;
     }
 }

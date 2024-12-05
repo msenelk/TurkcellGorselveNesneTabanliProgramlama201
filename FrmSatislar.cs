@@ -18,7 +18,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=MSENELK\SQLEXPRESS;Initial Catalog=DbUrun;Integrated Security=True");
-
+        DataSet1TableAdapters.TblSatislarTableAdapter ds = new DataSet1TableAdapters.TblSatislarTableAdapter();
         private void btnListele_Click(object sender, EventArgs e)
         {
             SqlCommand komut1 = new SqlCommand("Execute SatisListesi", baglanti);
@@ -38,9 +38,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             comboBox1.DisplayMember = "UrunAd";
             comboBox1.DataSource = dt2;
 
-            DataSet1TableAdapters.TblSatislarTableAdapter ds = new DataSet1TableAdapters.TblSatislarTableAdapter();
+            
             dataGridView1.DataSource = ds.SatisListesi();
         
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            ds.SatisEkle(int.Parse(comboBox1.SelectedValue.ToString()),int.Parse(txtMusteri.Text),byte.Parse(txtAdet.Text),decimal.Parse(txtFiyat.Text),decimal.Parse(txtToplam.Text),DateTime.Parse(mskTarih.Text));
+            MessageBox.Show("Satış başarıyla yapıldı.");
+
         }
     }
 }

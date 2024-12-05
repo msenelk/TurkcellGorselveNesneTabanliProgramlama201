@@ -2299,11 +2299,23 @@ SELECT ID, Urun, Musteri, Adet, Fiyat, Toplam, Tarih FROM TblSatislar WHERE (ID 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TblSatislar.*\r\nFROM     TblSatislar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO [TblSatislar] ([Urun], [Musteri], [Adet], [Fiyat], [Toplam], [Tarih])" +
+                " VALUES (@Urun, @Musteri, @Adet, @Fiyat, @Toplam, @Tarih);\r\nSELECT ID, Urun, Mus" +
+                "teri, Adet, Fiyat, Toplam, Tarih FROM TblSatislar WHERE (ID = SCOPE_IDENTITY())";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Urun", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Urun", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Musteri", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Musteri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adet", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Adet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fiyat", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Fiyat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Toplam", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Toplam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2599,6 +2611,65 @@ SELECT ID, Urun, Musteri, Adet, Fiyat, Toplam, Tarih FROM TblSatislar WHERE (ID 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> Urun, global::System.Nullable<int> Musteri, global::System.Nullable<byte> Adet, global::System.Nullable<decimal> Fiyat, global::System.Nullable<decimal> Toplam, global::System.Nullable<global::System.DateTime> Tarih, int Original_ID, global::System.Nullable<int> Original_Urun, global::System.Nullable<int> Original_Musteri, global::System.Nullable<byte> Original_Adet, global::System.Nullable<decimal> Original_Fiyat, global::System.Nullable<decimal> Original_Toplam, global::System.Nullable<global::System.DateTime> Original_Tarih) {
             return this.Update(Urun, Musteri, Adet, Fiyat, Toplam, Tarih, Original_ID, Original_Urun, Original_Musteri, Original_Adet, Original_Fiyat, Original_Toplam, Original_Tarih, Original_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int SatisEkle(global::System.Nullable<int> Urun, global::System.Nullable<int> Musteri, global::System.Nullable<byte> Adet, global::System.Nullable<decimal> Fiyat, global::System.Nullable<decimal> Toplam, global::System.Nullable<global::System.DateTime> Tarih) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Urun.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(Urun.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Musteri.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(Musteri.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Adet.HasValue == true)) {
+                command.Parameters[2].Value = ((byte)(Adet.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Fiyat.HasValue == true)) {
+                command.Parameters[3].Value = ((decimal)(Fiyat.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Toplam.HasValue == true)) {
+                command.Parameters[4].Value = ((decimal)(Toplam.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Tarih.HasValue == true)) {
+                command.Parameters[5].Value = ((System.DateTime)(Tarih.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
