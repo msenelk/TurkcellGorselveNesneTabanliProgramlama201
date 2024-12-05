@@ -49,5 +49,15 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             MessageBox.Show("Satış başarıyla yapıldı.");
 
         }
+
+        private void btnHesapla_Click(object sender, EventArgs e)
+        {
+            double adet, fiyat, toplam;
+            adet = Convert.ToDouble(txtAdet.Text);
+            fiyat = Convert.ToDouble(txtFiyat.Text);
+            toplam = adet * fiyat;
+            txtToplam.Text = toplam.ToString();
+
+        }
     }
 }

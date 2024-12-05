@@ -37,7 +37,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtMusteri = new System.Windows.Forms.TextBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
+            this.btnHesapla = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnListele = new System.Windows.Forms.Button();
             this.txtFiyat = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtMusteri);
             this.groupBox1.Controls.Add(this.btnGuncelle);
-            this.groupBox1.Controls.Add(this.btnSil);
+            this.groupBox1.Controls.Add(this.btnHesapla);
             this.groupBox1.Controls.Add(this.btnKaydet);
             this.groupBox1.Controls.Add(this.btnListele);
             this.groupBox1.Controls.Add(this.txtFiyat);
@@ -148,14 +148,15 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // btnSil
+            // btnHesapla
             // 
-            this.btnSil.Location = new System.Drawing.Point(19, 398);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(150, 50);
-            this.btnSil.TabIndex = 8;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnHesapla.Location = new System.Drawing.Point(19, 398);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(150, 50);
+            this.btnHesapla.TabIndex = 8;
+            this.btnHesapla.Text = "Hesapla";
+            this.btnHesapla.UseVisualStyleBackColor = true;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
             // btnKaydet
             // 
@@ -272,7 +273,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtMusteri;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnHesapla;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.TextBox txtFiyat;
