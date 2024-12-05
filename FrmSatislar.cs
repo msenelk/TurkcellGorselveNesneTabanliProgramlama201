@@ -37,6 +37,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama201
             comboBox1.ValueMember = "UrunId";
             comboBox1.DisplayMember = "UrunAd";
             comboBox1.DataSource = dt2;
+
+            DataSet1TableAdapters.TblSatislarTableAdapter ds = new DataSet1TableAdapters.TblSatislarTableAdapter();
+            dataGridView1.DataSource = ds.SatisListesi();
+        
         }
     }
 }
